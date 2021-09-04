@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 * {
 	@apply font-paragraph;
@@ -14,9 +15,13 @@
 }
 
 body {
-	@apply bg-black bg-opacity-95;
+	@apply bg-black bg-opacity-0;
 
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.text-shadow {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
