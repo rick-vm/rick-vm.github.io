@@ -3,13 +3,11 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: {
+			'title': ['Lato Bold', 'monospace'],
 			'paragraph': ['Lato', 'monospace'],
 		},
 		boxShadow: {
-			'2md': '3px 3px 7px 3px rgba(0, 0, 0, 0.5)',
-		},
-		dropShadow: {
-			'2md': '3px 3px 7px rgba(0, 0, 0, 0.5)',
+			'2md': '2px 2px 8px 1px rgba(0, 0, 0, 0.25)',
 		},
 	},
 	variants: {
