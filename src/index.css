@@ -13,6 +13,11 @@
 @tailwind utilities;
 @tailwind screens;
 
+:root {
+	--bg-color-1: rgba(14, 14, 14);
+	--bg-color-2: rgba(19, 19, 19);
+}
+
 * {
 	@apply font-paragraph;
 	@apply text-gray-100;
@@ -23,27 +28,41 @@
 }
 
 body {
-	@apply bg-black bg-opacity-90;
-
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+	background-color: var(--bg-color-2);
+}
+
+.text-neon-blue {
+	text-shadow: 
+		0 0 2px rgba(255, 255, 255, 0.3),
+		0 0 5px rgba(1, 111, 255, 0.7),
+		0 0 10px rgba(0, 15, 230, 1),
+		0 0 10px rgba(0, 15, 230, 1);
 }
 
 .text-shadow {
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
 }
+
 .text-shadow-xl {
-	text-shadow: 3.5px 3.5px 4px rgba(0, 0, 0, 0.75);
+	text-shadow: 3.5px 3.5px 2px rgba(0, 0, 0, 0.8);
 }
 
-.text-neon-blue-500 {
-	text-shadow: 0, 0, 5px, rgba(59, 130, 246, 1);
-}
-
-.background {
+.background-bar {
 	position: absolute;
+	width: 100%;
+	height: 100%;
 	top: 0;
 	left: 0;
 	z-index: -99999;
+}
+
+.background-dark {
+	background-color: var(--bg-color-1);
+}
+
+.background-light {
+	background-color: var(--bg-color-2);
 }

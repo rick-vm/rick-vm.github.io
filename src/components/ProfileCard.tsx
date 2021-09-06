@@ -6,24 +6,15 @@ export interface ProfileCardProps {
 	description?: string
 }
 
-export default function ProfileCard({ image, name, description }: ProfileCardProps): JSX.Element {
+export function ProfileCard({ image, name, description }: ProfileCardProps): JSX.Element {
 	return (
-		<div className='flex flex-col justify-center items-center backdrop-blur-lg bg-gray-300 bg-opacity-10 rounded-xl m-4 p-4'>
-			<img className='w-36 h-36 hover:shadow-2md transition-shadow rounded-full mb-4' src={image}></img>
-			<h1 className='font-title text-3xl'>
+		<div className='flex flex-col shadow-2lg justify-center items-center rounded-3xl m-8 p-6 pl-7 pr-7 backdrop-filter backdrop-blur-md bg-gray-400 bg-opacity-5 duration-500 transition-transform transform hover:translate-y-4 hover:scale-110'>
+			<img className='w-44 h-44 shadow-lg rounded-full mb-2' src={image}></img>
+			<h1 className='font-title text-4xl text-shadow-xl mb-1'>
 				{'Hey, I\'m '}
-				<span className='font-title text-3xl text-blue-600 text-neon-blue-500'>{name}</span>
+				<span className='font-title text-neon-blue text-blue-600'>{name}</span>
 			</h1>
-			<p className='max-w-md font-paragraph text-xl text-opacity-90 text-gray-300 text-shadow mb-4'>eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo eyo</p>	
+			<p className='max-w-md font-paragraph text-2xl text-opacity-90 text-gray-400 text-shadow'>{description}</p>	
 		</div> 
 	);
-	// return (
-	// 	<div className="w-96 bg-gray-800 backdrop-blur-md rounded-sm flex flex-col justify-center items-center">
-	// 		<div className='h-6'></div>
-	// 		<img className="w-28 h-28 hover:shadow-2md transition-shadow rounded-full center" src={image}/>
-	// 		<div className="h-2"></div>
-	// 		<h1 className="text-shadow text-2xl font-title">{title}</h1>
-	// 		<p className='text-shadow text-lg'>{description}</p>	
-	// 	</div>
-	// );
 }
