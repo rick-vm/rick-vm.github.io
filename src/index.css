@@ -15,7 +15,7 @@
 
 :root {
 	--bg-color-1: rgba(14, 14, 14);
-	--bg-color-2: rgba(19, 19, 19);
+	--bg-color-2: rgba(20, 20, 20);
 }
 
 * {
@@ -30,8 +30,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 	scroll-behavior: smooth;
-
-	background-color: var(--bg-color-2);
 }
 
 ::-webkit-scrollbar {
@@ -63,15 +61,18 @@ body {
 	}
 }
 
-.background-wave {
-	position: absolute;
-	z-index: -99999;
-	background: url('./svgs/darkWave.svg') repeat-x;
+.background-wave-dark {
+	background: url('./svgs/darkWave.svg');
 	width: 100vw;
 	height: 200px;
 	transform-origin: left;
 	transform: scaleX(8);
-	animation: wave-animation 10s ease-in-out;
+}
+
+.background-wave-light {
+	@apply background-wave-dark;
+
+	background: url('./svgs/lightWave.svg');
 }
 
 .background-dark {
