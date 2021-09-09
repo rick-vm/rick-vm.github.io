@@ -18,10 +18,13 @@ export class Wave extends React.Component<WaveProps> {
 	}
 
 	// public static methods
-	public static generateWave(nWaves = 5): string {
+	private static generateWave(): string {
 		let res = '';
 
-		res += `L${Math.random()} ${Math.random()}`;
+		const start = Math.random() * 100;
+		const end = Math.random() * 100;
+
+		res += 'L0 ' + start; 
 
 		for (let i = 0; i < nWaves; i++) {
 			res += '';
