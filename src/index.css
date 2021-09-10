@@ -52,27 +52,8 @@ body {
 	text-shadow: 3.5px 3.5px 2px rgba(0, 0, 0, 0.8);
 }
 
-@keyframes wave-animation {
-	from {
-		translate: translateX(0px);
-	}
-	to {
-		translate: translateX(1000px);
-	}
-}
-
-.background-wave-dark {
-	background: url('./svgs/darkWave.svg');
-	width: 100vw;
-	height: 200px;
-	transform-origin: left;
-	transform: scaleX(8);
-}
-
-.background-wave-light {
-	@apply background-wave-dark;
-
-	background: url('./svgs/lightWave.svg');
+.text-shadow-2xl {
+	text-shadow: 5px 5px 2px rgba(0, 0, 0, 1);
 }
 
 .background-dark {
@@ -81,4 +62,16 @@ body {
 
 .background-light {
 	background-color: var(--bg-color-2);
+}
+
+h1 {
+	@apply font-title text-6xl text-shadow-2xl;
+}
+
+h2 {
+	@apply font-title text-4xl text-shadow-xl;
+}
+
+p {
+	@apply font-paragraph text-2xl text-opacity-90 text-gray-400 text-shadow;
 }
