@@ -5,9 +5,15 @@ export interface WaveProps {
 	className?: string,
 }
 
+export interface Vector {
+	x: number,
+	y: number,
+}
+
 const N_WAVES = 2;
 const X_OFFSET = 1000 / N_WAVES;
 const HEIGHT = 100;
+const D_THRESHOLD = 50;
 
 export class Wave extends React.Component<WaveProps> {
 	// public props
@@ -21,29 +27,44 @@ export class Wave extends React.Component<WaveProps> {
 		this.className = className;
 	}
 
-	// public static methods
+	// private static methods
+	private static generateCoords(): Vector[] {
+		const res: Vector[] = [];
+		const d = 0;
+		
+		do {
+			const yStart = Math.random() * HEIGHT;
+			const yEnd = Math.random() * HEIGHT;
+
+			res.push({ x: 0, y: yStart });
+			
+			for (let i = 1; i < N_WAVES; i++) {
+				const y = Math.random() * HEIGHT;
+				
+				res.push({ x: i * X_OFFSET + Math.random() * 100 - 50, y });
+				d += Math.abs(res[i - 1].y - y);
+			}
+			
+			res.push({ x: 1000, y: yEnd });
+			d += Math.abs(yEnd - res[res.length - 1]!.y);
+		} while (d / N_WAVES < D_THRESHOLD);
+		
+		return res;
+	}
+	
 	private static generateWave(): string {
+		const coords = Wave.generateCoords();
+
 		let res = '';
+		res += `L${coords[0]!.x} ${coords[0]!.y} `;
 
-		const start = Math.random() * (HEIGHT - 25);
-		const end = Math.random() * (HEIGHT - 25);
+		let angle = Math.random() * 50 - 25;
 
-		res += `L0 ${start} `;
-
-		let prevX = 0, prevY = start;
-		let prevAngle = Math.random() * 50 - 25;
-
-		for (let i = 1; i < N_WAVES; i++) {
-			const x = X_OFFSET * i + (Math.random() * 50 - 25);
-			const y = Math.random() * (HEIGHT - 25);
-
-			res += `C${prevX + 200} ${prevY + prevAngle} ${x - 200} ${y - (prevAngle = (Math.random() * 50 - 25))} ${x} ${y} `;
-
-			prevX = x;
-			prevY = y;
+		for (let i = 1; i < coords.length; i++) {
+			res += `C${coords[i - 1]!.x + 150} ${coords[i - 1]!.y - angle} ${coords[i]!.x - 150} ${coords[i]!.y + (angle = Math.random() * 50 - 25)} ${coords[i]!.x} ${coords[i]!.y}`;
 		}
 
-		return `M1000 ${HEIGHT} L0 ${HEIGHT} ${res} C${prevX + 200} ${prevY + prevAngle} 800 ${Math.random() * 50 - 25} 1000 ${end} Z`;
+		return `M1000 ${HEIGHT} L0 ${HEIGHT} ${res} Z`;
 	}
 
 	// public methods
