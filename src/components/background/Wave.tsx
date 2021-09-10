@@ -25,8 +25,8 @@ export class Wave extends React.Component<WaveProps> {
 	private static generateWave(): string {
 		let res = '';
 
-		const start = Math.random() * HEIGHT;
-		const end = Math.random() * HEIGHT;
+		const start = Math.random() * (HEIGHT - 25);
+		const end = Math.random() * (HEIGHT - 25);
 
 		res += `L0 ${start} `;
 
@@ -35,7 +35,7 @@ export class Wave extends React.Component<WaveProps> {
 
 		for (let i = 1; i < N_WAVES; i++) {
 			const x = X_OFFSET * i + (Math.random() * 50 - 25);
-			const y = Math.random() * HEIGHT;
+			const y = Math.random() * (HEIGHT - 25);
 
 			res += `C${prevX + 200} ${prevY + prevAngle} ${x - 200} ${y - (prevAngle = (Math.random() * 50 - 25))} ${x} ${y} `;
 
