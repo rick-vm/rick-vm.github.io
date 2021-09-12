@@ -9,7 +9,7 @@ export interface ImageGlassCardProps {
 export function ImageGlassCard({ children, image, zoomOnHover = true }: ImageGlassCardProps): JSX.Element {
 	return (
 		<div className={'flex flex-col shadow-2lg justify-center items-center rounded-3xl m-2 backdrop-filter backdrop-blur-md bg-gray-400 bg-opacity-5' + (zoomOnHover ? ' duration-700 ease-in-out transition-transform transform origin-top hover:scale-105' : '')}>
-			<img src={image} className='rounded-t-3xl' />
+			<img src={image} draggable='false' className='rounded-t-3xl' />
 			<div className='p-4'>
 				{children}
 			</div>

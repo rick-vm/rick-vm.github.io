@@ -10,7 +10,7 @@ export interface ProfileCardProps {
 export function ProfileCard({ image, name, description }: ProfileCardProps): JSX.Element {
 	return (
 		<GlassCard>
-			<img draggable='false' className='w-44 h-44 shadow-lg rounded-full mb-2' src={image}></img>
+			<img draggable='false' className='w-44 h-44 shadow-lg rounded-full mb-2' src={image}/>
 			<h2 className='font-title text-4xl text-shadow-xl mb-1'>
 				{'Hey, I\'m '}
 				<span className='font-title text-neon-blue text-blue-600'>{name}</span>
