@@ -17,11 +17,11 @@ export class Wave extends React.Component<WaveProps> {
 	private static readonly _MIN_HIGHS = 2;
 	private static readonly _WAVES = 5;
 	private static readonly _HEIGHT = 100;
-	private static readonly _CONTRAST = 1 / 1.2;
+	private static readonly _CONTRAST = 1 / 2;
 
 	private static readonly _HALF_HEIGHT = Wave._HEIGHT / 2;
 	private static readonly _X_OFFSET = 1000 / (Wave._WAVES - 1);
-	private static readonly _CUBIC_X_OFFSET = Wave._X_OFFSET / 1.75;
+	private static readonly _CUBIC_X_OFFSET = Wave._X_OFFSET / 2.25;
 
 	// public props
 	public readonly color: string;
@@ -37,18 +37,19 @@ export class Wave extends React.Component<WaveProps> {
 	// private static methods
 	/**
 	 * Generates an array representing high-low profile.
-	 * -1 is low, 1 is high.
+	 * -1 is high, 1 is low.
 	 */
 	private static generateProfile(): number[] {
-		const res: number[] = new Array(Wave._WAVES).fill(-1);
+		const res: number[] = new Array(Wave._WAVES).fill(1);
 
 		let highs = 0;
 		
 		for (let i = 0; i < Wave._WAVES; (i += 2, highs++)) {
 			// 										 calculate "open" positions
+			console.log(((Wave._WAVES - i) - (2 * (Wave._MIN_HIGHS - highs) - 1)));
 			i += floor(random() * ((Wave._WAVES - i) - (2 * (Wave._MIN_HIGHS - highs) - 1)));
 
-			res[i] = 1;
+			res[i] = -1;
 		}
 
 		return res;
@@ -58,10 +59,10 @@ export class Wave extends React.Component<WaveProps> {
 	 * Generates an svg wave string.
 	 */	
 	public static generateWave(): string {
-		const profile = Wave.generateProfile();
+		const profile = Wave.generateProfile(); console.log(profile);
 		let res = '';
 
-		let xPrev = 0, yPrev = pow(random(), Wave._CONTRAST) * Wave._HALF_HEIGHT * profile[0] + Wave._HALF_HEIGHT;
+		let xPrev = 0, yPrev = pow(random(), Wave._CONTRAST) * Wave._HALF_HEIGHT + Wave._HALF_HEIGHT;
 
 		res += `L${xPrev} ${yPrev} `;
 
