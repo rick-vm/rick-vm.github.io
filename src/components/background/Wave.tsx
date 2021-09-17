@@ -42,16 +42,18 @@ export class Wave extends React.Component<WaveProps> {
 	private static generateProfile(): number[] {
 		const res: number[] = new Array(Wave._WAVES).fill(1);
 
-		let highs = 0;
-		
-		for (let i = 0; i < Wave._WAVES; (i += 2, highs++)) {
-			// 										 calculate "open" positions
-			console.log(((Wave._WAVES - i) - (2 * (Wave._MIN_HIGHS - highs) - 1)));
-			i += floor(random() * ((Wave._WAVES - i) - (2 * (Wave._MIN_HIGHS - highs) - 1)));
+		let minHighs = Wave._MIN_HIGHS;
+		let pos = 0;
 
-			res[i] = -1;
+		while (pos < Wave._WAVES) {
+			const range = (Wave._WAVES - pos) - (--minHighs > 0 ? 2 * minHighs : 0);
+			pos += floor(random() * (range));
+
+			res[pos] = -1;
+
+			pos += 2;
 		}
-
+		
 		return res;
 	}
 
@@ -62,7 +64,7 @@ export class Wave extends React.Component<WaveProps> {
 		const profile = Wave.generateProfile(); console.log(profile);
 		let res = '';
 
-		let xPrev = 0, yPrev = pow(random(), Wave._CONTRAST) * Wave._HALF_HEIGHT + Wave._HALF_HEIGHT;
+		let xPrev = 0, yPrev = pow(random(), Wave._CONTRAST) * Wave._HALF_HEIGHT * profile[0] + Wave._HALF_HEIGHT;
 
 		res += `L${xPrev} ${yPrev} `;
 
