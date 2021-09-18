@@ -17,7 +17,7 @@ export class Wave extends React.Component<WaveProps> {
 	private static readonly _MIN_HIGHS = 2;
 	private static readonly _WAVES = 5;
 	private static readonly _HEIGHT = 100;
-	private static readonly _CONTRAST = 1 / 2;
+	private static readonly _CONTRAST = 1 / 1.5;
 
 	private static readonly _HALF_HEIGHT = Wave._HEIGHT / 2;
 	private static readonly _X_OFFSET = 1000 / (Wave._WAVES - 1);
