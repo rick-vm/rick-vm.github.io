@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wave } from './background/Wave';
+import { Wave } from './Wave';
 
 export interface BackgroundWaveProps {
 	color: 'dark' | 'light',

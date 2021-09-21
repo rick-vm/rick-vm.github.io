@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProfileCard } from './components/ProfileCard';
 import { GlassCard } from './components/GlassCard';
-import { Section } from './components/Section';
+import { Section } from './components/background/Section';
 import { ImageGlassCard } from './components/ImageGlassCard';
 
 export default function App(): JSX.Element {
