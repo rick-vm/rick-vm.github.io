@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.c9c5194c.chunk.css",
-    "main.js": "/static/js/main.a5922ff6.chunk.js",
-    "main.js.map": "/static/js/main.a5922ff6.chunk.js.map",
+    "main.js": "/static/js/main.436f3113.chunk.js",
+    "main.js.map": "/static/js/main.436f3113.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d14fbb2.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d14fbb2.js.map",
     "static/js/2.90799cbf.chunk.js": "/static/js/2.90799cbf.chunk.js",
@@ -20,14 +20,16 @@
     "static/media/languagesImage.9c4a089a.png": "/static/media/languagesImage.9c4a089a.png",
     "static/media/libraryImage.13cfe43c.png": "/static/media/libraryImage.13cfe43c.png",
     "static/media/mathImage.b7148270.png": "/static/media/mathImage.b7148270.png",
+    "static/media/nonstopImage.ba8f8ea1.png": "/static/media/nonstopImage.ba8f8ea1.png",
     "static/media/profileImage.761d011a.png": "/static/media/profileImage.761d011a.png",
     "static/media/projectImage.6a966b6b.png": "/static/media/projectImage.6a966b6b.png",
+    "static/media/resumeImage.0264d0db.jpg": "/static/media/resumeImage.0264d0db.jpg",
     "static/media/wittenborgImage.cad67434.png": "/static/media/wittenborgImage.cad67434.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5d14fbb2.js",
     "static/js/2.90799cbf.chunk.js",
     "static/css/main.c9c5194c.chunk.css",
-    "static/js/main.a5922ff6.chunk.js"
+    "static/js/main.436f3113.chunk.js"
   ]
 }
