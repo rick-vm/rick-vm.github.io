@@ -64,7 +64,7 @@ export function Home(): JSX.Element {
 						A chat bot maintained by <a className='underline' href='https://bremea.com/'>BreMea Development</a>
 					</p>
 				</ImageCard>
-				<ImageCard image={gameImage} animationDelay={0.2}>
+				<ImageCard image={gameImage} animationDelay={0.15}>
 					<h2>
 						<a href='https://github.com/Rick-vm/game-stringine' className='text-neon-blue-light text-blue-600'>game-stringine</a>
 					</h2>
@@ -72,7 +72,7 @@ export function Home(): JSX.Element {
 						A small graphics framework, based on strings <span className='text-sm opacity-30'>(WIP)</span>
 					</p>
 				</ImageCard>
-				<ImageCard image={projectImage} animationDelay={0.4}>
+				<ImageCard image={projectImage} animationDelay={0.3}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Project Management</a>
 					</h2>
@@ -80,7 +80,7 @@ export function Home(): JSX.Element {
 						A tool aimed for software development projects <span className='text-sm opacity-30'>(WIP)</span>
 					</p>
 				</ImageCard>
-				<ImageCard image={codingLogoImage} animationDelay={0.6}>
+				<ImageCard image={codingLogoImage} animationDelay={0.45}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Other Projects</a>
 					</h2>
@@ -100,7 +100,7 @@ export function Home(): JSX.Element {
 						2021-present
 					</p>
 				</ImageCard>
-				<ImageCard image={profileImage} animationDelay={0.2}>
+				<ImageCard image={profileImage} animationDelay={0.15}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Jr IT/Data Engineer</a>
 					</h2>
@@ -110,7 +110,7 @@ export function Home(): JSX.Element {
 						2021-present
 					</p>
 				</ImageCard>
-				<ImageCard image={codeImage} animationDelay={0.4}>
+				<ImageCard image={codeImage} animationDelay={0.3}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Software Developer</a>
 					</h2>
@@ -120,7 +120,7 @@ export function Home(): JSX.Element {
 						2019-present
 					</p>
 				</ImageCard>
-				<ImageCard image={codeImage} animationDelay={0.6}>
+				<ImageCard image={codeImage} animationDelay={0.45}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Software Developer</a>
 					</h2>
@@ -130,7 +130,7 @@ export function Home(): JSX.Element {
 						2020-2021
 					</p>
 				</ImageCard>
-				<ImageCard image={wittenborgImage} animationDelay={0.8}>
+				<ImageCard image={wittenborgImage} animationDelay={0.6}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>IT Assistant</a>
 					</h2>
@@ -152,7 +152,7 @@ export function Home(): JSX.Element {
 						</div>
 					</div>
 				</ImageCard>
-				<ImageCard image={libraryImage} animationDelay={0.2}>
+				<ImageCard image={libraryImage} animationDelay={0.15}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Libraries and Software</a>
 					</h2>
@@ -162,7 +162,7 @@ export function Home(): JSX.Element {
 						</div>
 					</div>
 				</ImageCard>
-				<ImageCard image={mathImage} animationDelay={0.4}>
+				<ImageCard image={mathImage} animationDelay={0.3}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Miscellaneous</a>
 					</h2>
