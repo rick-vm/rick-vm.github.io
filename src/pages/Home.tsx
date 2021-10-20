@@ -34,7 +34,7 @@ const software: [string, number][] = [
 	['ESLint', 80],
 	['TailwindCSS', 75],
 	['npm', 75],
-	['git', 60],
+	['Git', 60],
 	['React', 45],
 	['Visual Studio', 40],
 ];
