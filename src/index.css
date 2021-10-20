@@ -29,6 +29,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+	background-color: var(--bg-color-2);
+
 	scroll-behavior: smooth;
 }
 
@@ -42,6 +44,13 @@ body {
 		0 0 5px rgba(1, 111, 255, 0.7),
 		0 0 8px rgba(0, 15, 230, 1),
 		0 0 10px rgba(0, 15, 230, 1);
+}
+
+.text-neon-blue-light {
+	text-shadow: 
+		0 0 1px rgba(255, 255, 255, 0.3),
+		0 0 3px rgba(1, 111, 255, 0.7),
+		0 0 5px rgba(0, 15, 230, 1);
 }
 
 .text-shadow {
@@ -74,4 +83,29 @@ h2 {
 
 p {
 	@apply font-paragraph text-2xl text-opacity-90 text-gray-400 text-shadow;
+}
+
+.animate-slide-up-base {
+	opacity: 0;
+	transform: scale(0.5) translateY(100px);
+}
+
+.animate-slide-up {
+	animation: scroll-up ease-in-out 0.8s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scroll-up {
+	0% {
+		opacity: 0;
+		transform: translateY(125px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.percentage-bar {
+	background-color: rgba(35, 35, 35, 1);
 }
