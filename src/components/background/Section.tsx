@@ -12,7 +12,7 @@ export interface BackgroundWaveProps {
 
 export function Section({ waveColor, color, children, title = '' }: BackgroundWaveProps): JSX.Element {
 	const { ref, inView } = useInView({
-		threshold: 0.25,
+		threshold: 0.2,
 		triggerOnce: true,
 	});
 
