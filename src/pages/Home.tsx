@@ -56,7 +56,7 @@ export function Home(): JSX.Element {
 				{[<ProfileCard key={0} name="Rick" description={'Hi! I\'m a developer from the Netherlands.'} image='https://cdn.discordapp.com/avatars/480721662149656576/e97ce36fd0c37a20be3008b96f5af5e6.png?size=4096' />]}
 			</Section>
 			<Section title='Projects' waveColor='light' color='dark'>
-				<ImageCard image={countbotImage} animationDelay={0}>
+				<ImageCard image={countbotImage}>
 					<h2>
 						<a href='https://count.bot/shop' className='text-neon-blue-light text-blue-600'>CountBot v3</a>
 					</h2>
@@ -64,7 +64,7 @@ export function Home(): JSX.Element {
 						A chat bot maintained by <a className='underline' href='https://bremea.com/'>BreMea Development</a>
 					</p>
 				</ImageCard>
-				<ImageCard image={gameImage} animationDelay={0.15}>
+				<ImageCard image={gameImage}>
 					<h2>
 						<a href='https://github.com/Rick-vm/game-stringine' className='text-neon-blue-light text-blue-600'>game-stringine</a>
 					</h2>
@@ -72,7 +72,7 @@ export function Home(): JSX.Element {
 						A small graphics framework, based on strings <span className='text-sm opacity-30'>(WIP)</span>
 					</p>
 				</ImageCard>
-				<ImageCard image={projectImage} animationDelay={0.3}>
+				<ImageCard image={projectImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Project Management</a>
 					</h2>
@@ -80,7 +80,7 @@ export function Home(): JSX.Element {
 						A tool aimed for software development projects <span className='text-sm opacity-30'>(WIP)</span>
 					</p>
 				</ImageCard>
-				<ImageCard image={codingLogoImage} animationDelay={0.45}>
+				<ImageCard image={codingLogoImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Other Projects</a>
 					</h2>
@@ -90,7 +90,7 @@ export function Home(): JSX.Element {
 				</ImageCard>
 			</Section>
 			<Section title='Experience' waveColor='dark' color='light'>
-				<ImageCard image={bremeaImage} animationDelay={0}>
+				<ImageCard image={bremeaImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Software Developer</a>
 					</h2>
@@ -100,7 +100,7 @@ export function Home(): JSX.Element {
 						2021-present
 					</p>
 				</ImageCard>
-				<ImageCard image={profileImage} animationDelay={0.15}>
+				<ImageCard image={profileImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Jr IT/Data Engineer</a>
 					</h2>
@@ -110,7 +110,7 @@ export function Home(): JSX.Element {
 						2021-present
 					</p>
 				</ImageCard>
-				<ImageCard image={codeImage} animationDelay={0.3}>
+				<ImageCard image={codeImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Software Developer</a>
 					</h2>
@@ -120,7 +120,7 @@ export function Home(): JSX.Element {
 						2019-present
 					</p>
 				</ImageCard>
-				<ImageCard image={codeImage} animationDelay={0.45}>
+				<ImageCard image={codeImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Software Developer</a>
 					</h2>
@@ -130,7 +130,7 @@ export function Home(): JSX.Element {
 						2020-2021
 					</p>
 				</ImageCard>
-				<ImageCard image={wittenborgImage} animationDelay={0.6}>
+				<ImageCard image={wittenborgImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>IT Assistant</a>
 					</h2>
@@ -142,7 +142,7 @@ export function Home(): JSX.Element {
 				</ImageCard>
 			</Section>
 			<Section title='Skills' waveColor='light' color='dark'>
-				<ImageCard image={languagesImage} animationDelay={0}>
+				<ImageCard image={languagesImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Languages</a>
 					</h2>
@@ -152,7 +152,7 @@ export function Home(): JSX.Element {
 						</div>
 					</div>
 				</ImageCard>
-				<ImageCard image={libraryImage} animationDelay={0.15}>
+				<ImageCard image={libraryImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Libraries and Software</a>
 					</h2>
@@ -162,7 +162,7 @@ export function Home(): JSX.Element {
 						</div>
 					</div>
 				</ImageCard>
-				<ImageCard image={mathImage} animationDelay={0.3}>
+				<ImageCard image={mathImage}>
 					<h2>
 						<a className='text-neon-blue-light text-blue-600'>Miscellaneous</a>
 					</h2>

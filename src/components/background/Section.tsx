@@ -15,7 +15,7 @@ export function Section({ waveColor, color, children, title = '' }: BackgroundWa
 		threshold: 0.2,
 		triggerOnce: true,
 	});
-
+	
 	return (
 		<section ref={ref} className={'background-' + color}>
 			{title ? <h1 className='mb-6'>{title}</h1> : ''}
