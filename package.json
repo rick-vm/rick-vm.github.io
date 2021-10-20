@@ -2,7 +2,7 @@
 	"name": "learn_react",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://rick-vm.github.io/rick-vm",
+	"homepage": "http://rick-vm.github.io",
 	"dependencies": {
 		"@craco/craco": "^6.2.0",
 		"@testing-library/jest-dom": "^5.14.1",
@@ -35,7 +35,7 @@
 		"test": "craco test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -b master -d build"
 	},
 	"eslintConfig": {
 		"extends": [

@@ -53,7 +53,7 @@ export function Home(): JSX.Element {
 	return (
 		<div>
 			<Section waveColor='dark' color='light'>
-				<ProfileCard name="Rick" description={'Hi! I\'m a developer from the Netherlands.'} image='https://cdn.discordapp.com/avatars/480721662149656576/e97ce36fd0c37a20be3008b96f5af5e6.png?size=4096'/>
+				{[<ProfileCard key={0} name="Rick" description={'Hi! I\'m a developer from the Netherlands.'} image='https://cdn.discordapp.com/avatars/480721662149656576/e97ce36fd0c37a20be3008b96f5af5e6.png?size=4096' />]}
 			</Section>
 			<Section title='Projects' waveColor='light' color='dark'>
 				<ImageCard image={countbotImage} animationDelay={0}>

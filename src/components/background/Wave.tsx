@@ -1,5 +1,5 @@
 import React from 'react';
-const { floor, random, round, pow } = Math;
+const { floor, random, pow } = Math;
 
 export interface WaveProps {
 	color: string,
